@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itbk.smallbox.mapper.RoleMapper">
+
+    <resultMap id="BaseResultMap" type="cn.itbk.smallbox.domain.Role">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="note" column="note" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id
+        ,name,note,
+        create_time
+    </sql>
+
+    <!-- 查询用户的角色id -->
+    <select id="queryUserRoleId" resultType="String">
+        select r.id
+        from role r LEFT JOIN role_user ru ON r.id = ru.role_id
+        where ru.user_id = #{id}
+    </select>
+
+</mapper>
