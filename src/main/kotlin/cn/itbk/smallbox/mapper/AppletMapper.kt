@@ -13,6 +13,4 @@ import org.apache.ibatis.annotations.Mapper
 @Mapper
 interface AppletMapper : BaseMapper<Applet> {
 
-//    fun selectKeyWordPage()
-
 }

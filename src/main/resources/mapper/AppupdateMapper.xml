@@ -16,12 +16,6 @@
             <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
-    <sql id="Base_Column_List">
-        id,apkName,apkUrl,
-        apkSize,apkVersionCode,apkVersionName,
-        apkDescription,forcedUpgrade,create_time
-    </sql>
-
     <select id="queryNewApp" resultType="cn.itbk.smallbox.domain.Appupdate">
         select * from appupdate group by id desc limit 1
     </select>

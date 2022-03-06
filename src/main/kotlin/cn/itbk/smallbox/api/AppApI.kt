@@ -10,17 +10,18 @@ import org.springframework.web.bind.annotation.RestController
 import javax.annotation.Resource
 
 /**
- *
+ * 应用信息
  *@author Hor
  *@create 2022/3/6 23:59
  */
 @RestController
 @ResponseResult
 @RequestMapping("/api")
-class AppApi {
+class AppApI {
 
     @Resource
     lateinit var appUpdateMapper: AppupdateMapper
+
 
     @GetMapping("/appUpdate")
     fun appUpdate(): Result<Any> {

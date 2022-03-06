@@ -20,7 +20,7 @@ import javax.annotation.Resource
 @RestController
 @ResponseResult
 @RequestMapping("/api/applet")
-class AppletApi {
+class AppletApI {
 
     @Resource
     lateinit var appletServiceImpl: AppletServiceImpl
@@ -39,8 +39,6 @@ class AppletApi {
         val applet = appletServiceImpl.getById(id) ?: throw SmallBoxException(ResultEnum.NOT_FOUND.message)
         return ResultGenerator.success(data = applet)
     }
-
-
 
 
 }
