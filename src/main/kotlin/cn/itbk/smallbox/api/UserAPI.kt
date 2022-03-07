@@ -35,7 +35,7 @@ class UserAPI {
 
     @GetMapping("/user")
     fun getUser(@RequestParam id: String?): Result<Any> {
-        val user: User = userServiceImpl.baseMapper.selectById(id) ?: return  ResultGenerator.fail(ResultEnum.USER_NO_EXISTS.message)
+        val user: User = userServiceImpl.baseMapper.selectById(id) ?: throw SmallBoxException(ResultEnum.USER_NO_EXISTS.message)
         val userVo = UserVo()
         BeanUtils.copyProperties(user,userVo)
         return ResultGenerator.success(data = userVo)

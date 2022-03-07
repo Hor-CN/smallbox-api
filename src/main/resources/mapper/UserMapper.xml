@@ -17,7 +17,5 @@
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
-    <sql id="Base_Column_List">
-        user_id, avatar, email, login_name, nick_name, password_md5,salt,introduce,developer_flag,create_time
-    </sql>
+
 </mapper>

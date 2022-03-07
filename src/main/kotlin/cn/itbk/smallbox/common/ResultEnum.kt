@@ -10,7 +10,7 @@ enum class ResultEnum(val message: String) {
     FAIL("失败"),
     CREATE_SUCCESS("创建成功"),
     DELETE_SUCCESS("删除成功"),
-    NOT_FOUND("找不到对应的资源"),
+    NOT_FOUND("资源不存在"),
     UNKNOWN_ERROR("未知错误"),
     LOGIN_SUCCESS("登录成功"),
     LOGIN_LOGOUT("注销登录成功"),
