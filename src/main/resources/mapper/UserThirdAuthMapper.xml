@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itbk.smallbox.mapper.UserThirdAuthMapper">
+
+    <resultMap id="BaseResultMap" type="cn.itbk.smallbox.domain.UserThirdAuth">
+            <id property="openid" column="openid" jdbcType="VARCHAR"/>
+            <result property="authId" column="auth_id" jdbcType="BIGINT"/>
+            <result property="loginType" column="login_type" jdbcType="OTHER"/>
+            <result property="accessToken" column="access_token" jdbcType="VARCHAR"/>
+    </resultMap>
+
+</mapper>
